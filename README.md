@@ -18,3 +18,4 @@ Dentro de los puntos requeridos en las clases se hicieron algunas modificaciones
 - Se sumó una ruta /admin donde se puede visualizar las órdenes y mensajes que se enviaron a la tienda. 
 
 # segundaentrega-reactjs-baezanderson
+# segundaentrega-reactjs-baezanderson

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+
+.navbar-brand, .navbar-brand:hover {
+    font-family: 'Square Peg', cursive;
+    font-size: 5em;
+    color: white!important;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar-light .navbar-brand {
+    color: rgb(255 255 255 / 90%);
+}
+
+.btn-outline-success {
+    font-weight: 700;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-outline-success:hover{
+    font-weight: 700;
+    color: #391485;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+.menuIcon{
+    filter: invert(1);
+}
+.searchForm{
+    margin-right: 10px;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding-top: 0.5rem; */
+    padding-bottom: 0.5rem;
+    align-content: center;
+    flex-direction: column!important;
+}
+
+#navbarScroll > div > a {
+    font-size: 1em;
+    color: #ffffff;
+    text-decoration: none;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#navbarScroll > div > a:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    color: #d4e3ff;
+}
+
+#navbarScroll > div > a:nth-child(1){
+    padding-left: 10px;
+}
+
+@media only screen and (min-width: 992px){
+    .navbar-expand-lg .navbar-nav {
+        margin-left: 15px;
+        flex-direction: row;
+    }
+}

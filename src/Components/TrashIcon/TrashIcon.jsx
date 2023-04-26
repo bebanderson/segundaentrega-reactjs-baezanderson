@@ -1,0 +1,19 @@
+import React, { useContext } from "react";
+import "./trashIcon.css";
+import { CartContext } from "../../Contexts/CartContext";
+import { Button } from "react-bootstrap";
+
+function TrashIcon(props){
+
+    const { removeProduct } = useContext(CartContext);
+
+    return(
+        <>            
+            <Button className="trashButton" variant="light" onClick={() => removeProduct(props.idProd)}>
+                <img className="trashIcon" alt="Icono de basura" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAGyElEQVR4nO2be4hXRRTHP7va1qaZ664u5loZgdnLTFLKsJQ0sIc9/9CiMoKIIntgUYSBFBRa1IYUFhSkIokUZfRQizKzUlEKe1lKPnZTq9VWbV1zf/1xZpzZ+5s7997fvfe3kvuFy53fuXNnzpx7ZuY7c+YH3ejGMY0Kz7Mq4H5gHNAGLASWlEOpowHVwBqgELhe6kql8kCYBzwNPK7SPwN9gQHq9xXAikD+SuAsoB7okbGONg4CvwFbc6wDgG+RL74aaVwdcEDJXrTyVSDdpIlib8nzWo98iNSoDJEXrAba9+CzNxCDDMxCmQS4APgIuDMgvw7YCzwTt6CeIfL3gPOB0cCPSBeoVs/eVfdpwG0qvRWYDfyEMRBIl5iv0rOBj2PoNAOYCOwEbg08qwIuBh5W+rwMrAQ2qeeXAn2A8THq8aIa+IZi12u08nynZM1A/5ByTrfevSNm3a+r/Fs8eS4HDjt06gtMR8aj1KgCHgKWAouB661nfTANe8pTRl4GAFil8q2NWa4TYV0AoB14Xl1B1FjpX9MokAK/AJcAtWkKCRsEo+AaFMuNjiwK8XkAiKvPBTYDT6asawZwS4x856SsJxGiDDABMxI3An8mLL/dSp+trrg4mLCukhBlgGXAm4gHJG08CEGahfTVJOgA5pVQX2JEGeBvzFxfKtJ2nVxR6iD4v8Exb4CoLuDCKGCy9XsSQnnLjfPU/QSgF7C/HJU2IgNUOVd+ca4mZIGUK6YdBQ31XZuB43JrPbI3UECo76A8K0qAHsCjGCOMU/KewOfANmCIr4Akg6Dm/98DOxKpmR8OA59Yv/WuVW9k2dxABPlKMgh+DQxFBr3XMGvwrsTxwBSVPoxZGe5B9BwEfJBVZQ3AX3R9Xw+7ns2qoT6cgewI7S9z48KuDmRMuhf/Fn8uaFFKNEZlzBj9MQaYnrawNExwu7oPTqtEQjRY6W1pC0tjAF15gzdX9rANvj00V0zk4QHVwEg690mXLIh6ZJaJktkcJLUB0mAmZiCqsuTvK/kjETIbJwJ/IFPZaI8MJGpVQDZbUkehsugCFXT+Kqeq++gImY0zkc3NSoxHuWRY6WbEOC5MQThBG/A78CohwZssuoCtlFYM4JQImQ1buWaPDMyYE+b+s5BI9kiEKNUDdyFxjqIBOysD2AOhrwFhITTbME0emV2XawYYDjyh0ruQsJ1mgg04tvh9VLgCGAH8APzjeG4rYBtAKztQlVEIkdnQhilQbCxbVoHfA25SeTqAsUioDsQjpgDXIvsHbfoFnwfMANYhUSEX9iGcG9xdoAoTtHDJbOiv3WIp55LVYmKULgPoxVALpvEAX1n120EdrwEKgbsLWgmXB4BphEtmQ3/t5ghZFAnSC7Ra4EaV7g1MVek9SNc4Ap8B5gAXAjd78rgMENUI1zjgM5Sr/9t121gAtKr0YmADEmPUs888AjNHlAesx+ovDuivYHeBPD0gigU2I1/7ADIWDEcOd4CcJ5gZfKGUTVEbWokBSP9qV0oUlAJ2I4IyDVvW5JGB8YB/kfndhaXAucA96r4XOe+wCEc8MSsDaDK0BfGYFqAf5mu7ZBp1GCbZ5JGB8YAdhJMglB5hrLMT0sYF7IHINRPE4QJJOICuI7M1QFoDhJEhX0OCHlAKC0y9DNYI6wKVwDXIUZNdyIi6z5EvCzYY1wD2miOzTVmXAWqAt4HLLNlM5IjMhkDeVmRu7Yt7JojDBuOywH74SVBJcHWBF+jceJCzPouQxUUQPi4Qhw3GZYGZboRoBA3QC8Oa3gFOBh5Tv4dSbBhbmVLZYFYs0EbJgZGTMN3iC+R8gH0stoZiuMhQEjaYFQu0UXJgZCdyFvc0ZFk5GLhSPbMDDzZcZCgPD9AG9pEgjdiBkaABCsB9yN6/PnSo8RzuI3EuMmQzP71Cc8mw0k0RsgZL5iNBGsti5AnFeGQpfJDowMMEzD79WEu+AJlCL4qQzVeyURGyFaqOVcmakj+GYQwwNSJvGmxSdSzKstAsjsiE7Q1mDU2CMmOBkNwANcCDdD6M3IqsuCA8SDIMeAAZV0BOg09T9Vcix94neuqtw5CgLg3Nz0HccE1Arv9esy7kvbXq+WzECIfU76uAq1X6EMZAQUzGdLNJpatfjKQesBL52ssD8k/VfQTus/rL1XsrEY/5EnHljerajgxurY53eyBeB8IKVyfUuSwYgvlLzW7ghozKrQfewnz9uRmVewRZxtTvBl6xfu9GjtMcKrG8emTs0FxlIzAGM94clbgdUTDrgxAfktNZxDxOVdQix+LHIEvYUtGOkLAlwGcZ6NWNbnSjGP8BFg52F6IomZgAAAAASUVORK5CYII="/>
+            </Button>
+        </>
+    )
+}
+
+export default TrashIcon;

@@ -1,0 +1,17 @@
+.favorite-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    margin: 10px 0px 10px 0px;
+}
+
+.favorite-body {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    flex-direction: column;
+}

@@ -1,0 +1,26 @@
+.produtsViewContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-primary {
+  color: #white;
+  background-color: #391485;
+  border-color: #391485;
+}
+
+img.card-img-top {
+  max-height: 286px;
+}
+
+.itemCountSection {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: baseline;
+}

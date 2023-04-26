@@ -1,0 +1,9 @@
+.favoriteButton{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.favoriteIcon{
+    width: 24px;
+}

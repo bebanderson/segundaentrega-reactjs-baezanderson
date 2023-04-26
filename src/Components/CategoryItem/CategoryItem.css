@@ -1,0 +1,26 @@
+.figure {
+    margin: 10px;
+    filter: saturate(0.7); 
+    opacity: 0.9;
+}
+
+.figure:hover {
+    transform: scale(0.97);
+    filter: saturate(1); 
+    opacity: 1;
+    transition: filter 0.8s, opacity 0.8s, transform 0.8s;
+}
+
+img.figure-img.img-fluid {
+    width: 20vw;
+    margin: 0px;
+}
+
+.figure-caption {
+    width: 20vw;
+    position: relative;
+    margin-top: -1.5em;
+    font-size: 2.5em;
+    color: #ffffff;
+    background-color: #4a4a4aa3;
+}

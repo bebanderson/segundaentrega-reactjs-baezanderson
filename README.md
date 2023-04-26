@@ -17,5 +17,3 @@ Dentro de los puntos requeridos en las clases se hicieron algunas modificaciones
 - Con respecto al count que se visualiza en el detalle del producto, se removió el seteo del estado a 1 cuando el producto o cantidad se suma al carrito.
 - Se sumó una ruta /admin donde se puede visualizar las órdenes y mensajes que se enviaron a la tienda. 
 
-# segundaentrega-reactjs-baezanderson
-# segundaentrega-reactjs-baezanderson
